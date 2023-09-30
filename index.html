@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            keyframes: {
+              wiggle: {
+                "0%, 100%": { transform: "rotate(-3deg)" },
+                "50%": { transform: "rotate(3deg)" },
+              },
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #ecc94b;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background: #ecc94b;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="scrollDemo"
+      class="font-mono bg-gray-200 text-slate-600 dark:bg-gray-800"
+    >
+      <!-- Darkmode -->
+      <div class="absolute lg:right-20 right-4">
+        <div
+          class="relative inline-block w-10 mt-6 ml-6 mr-2 align-middle transition duration-200 ease-in select-none"
+        >
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="absolute block w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
+          />
+          <label
+            for="toggle"
+            class="block h-6 overflow-hidden bg-gray-300 rounded-full cursor-pointer toggle-label"
+          ></label>
+        </div>
+      </div>
+
+      <div class="mx-auto lg:max-w-screen-xl dark:text-slate-400">
+        <div class="flex flex-col px-10 lg:flex-row lg:justify-between">
+          <!-- Disebelah kiri -->
+          <div
+            class="lg:py-20 py-0 pt-12 pb-10 lg:w-1/2 h-fit lg:h-screen lg:sticky lg:top-0"
+          >
+            <div class="flex flex-col max-w-lg">
+              <div>
+                <div class="relative w-fit group lg:-top-24">
+                  <img
+                    class="lg:max-w-[250px] max-w-[200px] opacity-90 duration-300 relative lg:block -left-10"
+                    src="./images/Profile Foto.png"
+                    alt=""
+                  />
+                  <h1
+                    class="mt-4 text-2xl lg:text-4xl font-bold dark:text-white group-hover:animate-none"
+                  >
+                    Sandy Arfian Mubaroq 👋
+                  </h1>
+
+                  <p class="text-lg dark:text-white">Front End Enthusiast</p>
+                  <p class="max-w-md mt-4">
+                    A passionate fresh graduate in front-end development
+                  </p>
+                </div>
+              </div>
+
+              <div class="hidden lg:block -mt-14">
+                <ul class="space-y-10">
+                  <li class="group">
+                    <span
+                      id="got"
+                      class="inline-block w-8 mb-1 mr-2 duration-300 border-b-2 group-hover:w-10 border-slate-800 dark:border-white"
+                    ></span>
+                    <a href="#about">About</a>
+                  </li>
+                  <li class="group">
+                    <span
+                      id="got"
+                      class="inline-block w-8 mb-1 mr-2 duration-300 border-b-2 group-hover:w-10 border-slate-800 dark:border-white"
+                    ></span>
+                    <a href="#experience">Experience</a>
+                  </li>
+                  <li class="group">
+                    <span
+                      id="got"
+                      class="inline-block w-8 mb-1 mr-2 duration-300 border-b-2 group-hover:w-10 border-slate-800 dark:border-white"
+                    ></span>
+
+                    <a href="#project">Personal Projects</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-8 mb-0 lg:mt-10">
+                <ul class="flex space-x-5">
+                  <li class="hover:text-slate-400 dark:hover:text-yellow-500">
+                    <a href="https://github.com/sunday200" target="blank">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                        class="w-6 h-6"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="hover:text-slate-400 dark:hover:text-yellow-500">
+                    <a
+                      href="https://www.linkedin.com/in/sandy-arfian-mubaroq/"
+                      target="_blank"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="h-6 w-6"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Disebelah kanan -- bisa discroll -->
+          <div class="lg:w-1/2 lg:py-20" id="scroll">
+            <!-- About -->
+            <div class="lg:max-w-xl" id="about">
+              <div class="space-y-3">
+                <p>
+                  Pada masa kuliah, saya
+                  <span class="text-slate-900 dark:text-yellow-500">
+                    mengenal coding</span
+                  >
+                  dari mata kuliah Bahasa Pemrograman. Mata kuliah tersebut
+                  berhasil membuat saya penasaran dan membawa saya mengikuti
+                  Bangkit Academy, sebuah program Kampus Merdeka yang
+                  memungkinkan saya belajar coding terutama di Machine Learning
+                  bersama mahasiswa seluruh Indonesia selama 1 semester.
+                  Pengalaman tesebut mengantarkan saya dapat magang di sebuah
+                  startup di Yogyakarta sebagai seorang Software Engineer.
+                </p>
+                <p>
+                  Saya melihat dunia
+                  <span class="text-slate-900 dark:text-yellow-500"
+                    >Software Engineering</span
+                  >
+                  adalah dunia yang akan
+                  <span class="text-slate-900 dark:text-yellow-500"
+                    >terus berkembang</span
+                  >. Kemajuan teknologi terus mengantarkan tantangan baru dan
+                  <span class="text-slate-900 dark:text-yellow-500">
+                    peluang untuk inovasi</span
+                  >
+                  . Ini mendorong saya untuk terus belajar, berdaptasi dan
+                  menjadi bagian dari pekembangan bidang ini. Saya percaya
+                  dengan semangat mempelajari hal baru yang tinggi, saya dapat
+                  <span class="text-slate-900 dark:text-yellow-500"
+                    >berkontibusi baik pada perkembangan dunia teknologi
+                    ini</span
+                  >
+                </p>
+                <p>
+                  Ketika tidak sedang berada di depan komputer, biasanya saya
+                  bermain dengan kucing, jogging di sekitar rumah atau mendaki
+                  gunung.
+                </p>
+              </div>
+
+              <!-- Experience -->
+              <div id="experience" class="space-y-0 mt-28 lg:space-y-8">
+                <a href="https://stechoq.com/" target="_blank">
+                  <!-- 1 -->
+                  <div
+                    class="flex flex-col gap-5 px-2 py-5 duration-300 lg:flex-row lg:justify-between hover:bg-gray-300 dark:hover:bg-gray-700 hover:rounded-lg group"
+                  >
+                    <div class="max-w-[180px]">Aug 2022 - Jan 2023</div>
+                    <div class="flex-1">
+                      <h2
+                        class="font-bold dark:text-white dark:group-hover:text-yellow-500"
+                      >
+                        Intern - PT Stechoq Robotika Indonesia
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="inline-block w-4 h-4 ml-0 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </h2>
+                      <p class="mb-1">Software Engineer</p>
+                      <p>
+                        Menjadi Software Engineer di Tim Electronic Nose.
+                        Bertanggung jawab atas integrasi antara mikrokontroller
+                        dengan database. Mengembangkan Machine Learning untuk
+                        klasifikasi data sensor dari mikrokontroller
+                      </p>
+                      <div class="mt-4">
+                        <ul class="flex flex-wrap gap-2">
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-500"
+                            >
+                              Node JS
+                            </div>
+                          </li>
+
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-500"
+                            >
+                              Machine Learning
+                            </div>
+                          </li>
+
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-500"
+                            >
+                              IoT
+                            </div>
+                          </li>
+
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-500"
+                            >
+                              Python
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- 2 -->
+                <a
+                  href="https://grow.google/intl/id_id/bangkit/?tab=machine-learning"
+                  target="_blank"
+                >
+                  <div
+                    class="flex flex-col gap-5 px-2 py-5 duration-300 lg:flex-row lg:justify-between hover:bg-gray-300 dark:hover:bg-gray-700 hover:rounded-lg group"
+                  >
+                    <div class="">Feb 2022 - Jul 2022</div>
+                    <div class="flex-1">
+                      <h2
+                        class="font-bold dark:text-white dark:group-hover:text-yellow-300"
+                      >
+                        Bangkit Academy led by Google, Tokopedia, Gojek, &
+                        Traveloka
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="inline-block w-4 h-4 ml-0 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </h2>
+                      <p class="mb-1">Machine Learning Student</p>
+                      <p>
+                        4 Bulan awal mengikuti pembelajaran asynchronous dan
+                        synchronous tentang Machine Learning. Mengikuti
+                        softskills tentang Time Management, Critical Thinking,
+                        Adaptability. Pada bulan ke-5 menjadi seorang machine
+                        learning dalam tim untuk proyek akhir, merancang machine
+                        learning untuk mendeteksi objek
+                      </p>
+                      <div class="mt-4">
+                        <ul class="flex flex-wrap gap-2">
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-300"
+                            >
+                              Tensorflow
+                            </div>
+                          </li>
+
+                          <li>
+                            <div
+                              class="px-3 py-1 rounded-full w-fit bg-slate-600/10 text-slate-800 dark:bg-yellow-400/10 dark:text-yellow-300"
+                            >
+                              Python
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Project  -->
+              <div id="projects">
+                <div class="mt-28">
+                  <!-- 1 -->
+                  <a
+                    href="https://cerulean-sundae-d0d988.netlify.app/"
+                    target="_blank"
+                  >
+                    <div
+                      class="flex flex-col gap-5 px-2 py-5 duration-300 lg:flex-row lg:justify-between hover:bg-gray-300 dark:hover:bg-gray-700 hover:rounded-lg group"
+                    >
+                      <div class="max-w-[180px] mt-2">
+                        <img src="./images/tracalori.png" alt="" />
+                      </div>
+                      <div class="flex-1">
+                        <h2
+                          class="font-bold dark:text-white dark:group-hover:text-yellow-500"
+                        >
+                          Tracalorie
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block w-4 h-4 ml-0 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </h2>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Dolorum id explicabo pariatur repellat sunt
+                          officiis ad. Aperiam provident quae enim architecto
+                          est, quibusdam libero facilis maiores earum eum
+                          reprehenderit necessitatibus velit vel dolor sapiente
+                          ipsum, dicta mollitia ea minus, aliquam cumque at
+                          debitis neque? Eum repellendus mollitia debitis ut?
+                          Corporis!
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- 2 -->
+                  <a
+                    href="https://stirring-torrone-d2f1bb.netlify.app"
+                    target="_blank"
+                  >
+                    <div
+                      class="flex flex-col gap-5 px-2 py-5 duration-300 lg:flex-row lg:justify-between hover:bg-gray-300 dark:hover:bg-gray-700 hover:rounded-lg group"
+                    >
+                      <div class="max-w-[180px] mt-2">
+                        <img src="./images/loopstudios.png" alt="" />
+                      </div>
+                      <div class="flex-1">
+                        <h2
+                          class="font-bold dark:text-white dark:group-hover:text-yellow-500"
+                        >
+                          Loopstudios
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block w-4 h-4 ml-0 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </h2>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Dolorum id explicabo pariatur repellat sunt
+                          officiis ad. Aperiam provident quae enim architecto
+                          est, quibusdam libero facilis maiores earum eum
+                          reprehenderit necessitatibus velit vel dolor sapiente
+                          ipsum, dicta mollitia ea minus, aliquam cumque at
+                          debitis neque? Eum repellendus mollitia debitis ut?
+                          Corporis!
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- 1 -->
+                  <a
+                    href="https://jolly-tapioca-0592fb.netlify.app/"
+                    target="_blank"
+                  >
+                    <div
+                      class="flex flex-col gap-5 px-2 py-5 duration-300 lg:flex-row lg:justify-between hover:bg-gray-300 dark:hover:bg-gray-700 hover:rounded-lg group"
+                    >
+                      <div class="max-w-[180px] mt-2">
+                        <img src="./images/feedbackUI.png" alt="" />
+                      </div>
+                      <div class="flex-1">
+                        <h2
+                          class="font-bold dark:text-white dark:group-hover:text-yellow-500"
+                        >
+                          Feedback
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block w-4 h-4 ml-0 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </h2>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Dolorum id explicabo pariatur repellat sunt
+                          officiis ad. Aperiam provident quae enim architecto
+                          est, quibusdam libero facilis maiores earum eum
+                          reprehenderit necessitatibus velit vel dolor sapiente
+                          ipsum, dicta mollitia ea minus, aliquam cumque at
+                          debitis neque? Eum repellendus mollitia debitis ut?
+                          Corporis!
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Progress Learning -->
+            <div></div>
+
+            <!-- Footer -->
+            <div id="footer" class="mt-20 text-sm opacity-80">
+              <p>
+                *Build with HTML, Javascript and Tailwind CSS, deployed with
+                Netlify
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="style.js"></script>
+  </body>
+</html>
