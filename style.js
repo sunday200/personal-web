@@ -87,3 +87,5 @@ var totalHeight = Math.max(
 console.log("Total Height of HTML Document:", totalHeight)
 
 
+
+
